@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <style>
+  #blog {
+      background-color: #212226;
+      padding: 50px 0;
+    }
+    
+    #blog h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    
+    #blog-posts {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    
+    .blog-post {
+      max-width: 300px;
+      margin: 20px;
+      border: 1px solid #fff;
+      border-radius: 10px;
+    }
+    
+    .blog-post img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    
+    .blog-post .content {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .blog-post h3 {
+      margin-top: 0;
+    }
+    
+    .blog-post p {
+      margin-bottom: 0;
+    }
+    
+    .blog-post a {
+      display: block;
+      text-align: right;
+      margin-top: 10px;
+      color: #4CAF50;
+    }
+  </style>
+  <title>Blog</title>
+</head>
+<body>
+  
+  <nav>
+    <ul>
+      <li><a href="index.html">Back</a></li>
+    </ul>
+  </nav>
+  
+ <div id="loading-overlay">
+    <img src="fn-status.gif" alt="Fortnite Status Image | By: S7tor">
+    <div class="loader"></div>
+    <div id="loading-bar">
+      <div id="loading-progress"></div>
+    </div>
+    <div id="load-info">
+      <div id="loading-percent"></div>
+      <div id="load-status">Servers Status: </div>
+      <div id="loading-text">Please Wait...</div>
+    </div>
+    <div id="fact-container"></div>
+  </div>
+  <script src="loader.js"></script>
+  
+  <section id="blog">
+    <div class="container">
+      <h2>Latest Posts</h2>
+      <div id="blog-posts"></div>
+    </div>
+  </section>
+  <script src="blog.js"></script>
+</body>
+</html>

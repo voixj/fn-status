@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="settings.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+  s1.async=true;
+  s1.src='https://embed.tawk.to/64f0d3d8a91e863a5c10ec1b/1h96bn1tv';
+  s1.charset='UTF-8';
+  s1.setAttribute('crossorigin','*');
+  s0.parentNode.insertBefore(s1,s0);
+  })();
+  </script>
+  <!--End of Tawk.to Script-->
+  
+  <meta name="description" content="Fortnite Season Countdown, Update Countdown, Crew Pack Countdown And More..">
+  <meta name="keywords" content="Fortnite Season End Countdown, Fortnite end season, Crew Pack Time">
+  <meta name="author" content="This Website Created By: - X D -, F0m">
+  
+  <title>Fortnite Status</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a onclick="toggleDropdown()" class="dropbtn">Menu</a></li>
+      <li><a id="blog" href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
+  
+  <div class="dropdown">
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#qaa">Question And Answer</a>
+      <a href="https://f0m14.github.io/home/">F0m Page</a>
+      <a href="challenges.html">Challenges</a>
+      <a href="battle-pass.html">Battle Pass Skins</a>
+      <a href="article.html">News Of Fortnite</a>
+    </div>
+  </div>
+  
+  <script>
+    function toggleDropdown() {
+      var dropdown = document.getElementById("myDropdown");
+      if (dropdown.style.display === "block") {
+        dropdown.style.display = "none";
+        dropdown.style.opacity = 0;
+      } else {
+        dropdown.style.display = "block";
+        dropdown.style.opacity = 1;
+      }
+    }
+  </script>
+  
+  <div id="loading-overlay">
+    <img src="fn-status.gif" alt="Fortnite Status Image | By: S7tor">
+    <div class="loader"></div>
+    <div id="loading-bar">
+      <div id="loading-progress"></div>
+    </div>
+    <div id="load-info">
+      <div id="loading-percent"></div>
+      <div id="load-status">Servers Status: </div>
+      <div id="loading-text">Please Wait...</div>
+    </div>
+    <div id="fact-container"></div>
+  </div>
+  <script src="loader.js"></script>
+  
+  <a class="hud-btn" id="open-settings-button">
+    <i class="fas fa-cog" id="fas"></i>
+  </a>
+  
+  <div id="levelDisplay">
+    <span id="uname">Unknown.</span>
+    <div class="level">Level: <span id="level">?</span></div>
+    <div class="xp">Exp: <span id="xp">?</span> / <span id="xpReq">?</span> XP</div>
+  </div>
+  
+  <section class="home" id="home">
+    <div class="content">
+      <div class="container-texts">
+        <h4>Status And News Of</h4>
+        <h1>Fortnite</h1>
+        <h3>This Site Have: <span id="text"></span> <span id="cursor"></span></h3>
+        <h5>Site Version: <span>3.5</span></h5>
+        <h4>Game Version: <span>26.00</span></h4>
+        <img src="season-banner.png" id="season-theme"></img>
+      </div>
+    </div>
+  </section>
+  
+  <section class="news" id="news-section">
+    <h1 class="title">News</h1>
+    <div id="news-container" class="news-container"></div>
+    <script src="news.js"></script>
+  </section>
+  
+  <section id="leaks-section">
+    <hr>
+    <h1 class="title" id="leaks-title">Leaks</h1>
+    <div id="leaks-container"></div>
+    <script src="leaks.js"></script>
+    <hr>
+  </section>
+  
+  <section class="countDown" id="countdown">
+    <h1 class="title">Countdowns</h1>
+    <div id="countdownContainer"></div>
+    <script src="countDown.js"></script>
+  </section>
+  
+    <section class="qaa" id="qaa">
+      <h1>Question And Answer</h1>
+
+      <div id="faq-container"></div>
+      <script>
+        var faq = [
+          {
+            question: "Is the countdown correct?",
+            answer: "Yes, it's true... Every countdown is official from Fortnite and if you change the countdown date we will change it as soon as possible!"
+          },
+          {
+            question: "Is the news official?",
+            answer: "Yes, every news is official and confirmed by Fortnite and also if there are strong leaks will be present in the news as a leak!"
+          },
+          {
+            question: "Will the site update continuously?",
+            answer: "Maybe yes, if there is interest from the developer of the site to improve and add features"
+          },
+        ];
+        
+        var faqContainer = document.getElementById("faq-container");
+        
+        for (var i = 0; i < faq.length; i++) {
+          var question = faq[i].question;
+          var answer = faq[i].answer;
+          
+          var questionElement = document.createElement("div");
+          questionElement.className = "faq-question";
+          questionElement.innerHTML = question;
+          
+          var answerElement = document.createElement("div");
+          answerElement.className = "faq-answer";
+          answerElement.innerHTML = answer;
+          
+          questionElement.innerHTML = questionElement.innerHTML + " &gt;";
+          
+          questionElement.addEventListener("click", function() {
+            var arrowElement = this.lastChild;
+            var answerElement = this.nextElementSibling;
+            if (answerElement.style.display === "none") {
+              answerElement.style.display = "block";
+              arrowElement.innerHTML = "&vArr;";
+            } else {
+              answerElement.style.display = "none";
+              arrowElement.innerHTML = "&gt;";
+            }
+          });
+          
+          faqContainer.appendChild(questionElement);
+          faqContainer.appendChild(answerElement);
+        }
+      </script>
+    </section>
+    </div>
+    
+    <div class="footer">
+      <div class="footer-content">
+        <h3>This Website Is Not Official From Epic Games.</h3>
+        <p>&copy; <span id="current-year"></span> - X D -</p>
+        <a href="https://youtube.com/@F0m_14/">YouTube</a>
+        <div class="counter">
+          <iframe height="90px" width="310px" frameborder="0" id="sub-counter" src="https://socialcounts.org/youtube-live-subscriber-count/UCY1JcpAX7sIvKxoLjZDIbvg/embed" allowFullScreen></iframe>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      document.getElementById("current-year").textContent = new Date().getFullYear();
+    </script>
+    
+    <div id="settings-popup">
+      <h2 id="settings">Settings</h2>
+      <p id="settingsDes">Here are some settings:</p>
+      <h2 id="settings-hr">Profile</h2>
+      <h2>Username:</h2>
+      <input type="text" id="username" placeholder="Enter your username"><br><br>
+      <button onclick="saveUsername()">Save</button>
+      <button onclick="resetLevel()">Reset Level</button>
+      <button onclick="createTxtFile()">Claim account details</button>
+      
+      <h2 id="settings-hr">Appearance</h2>
+      
+      <div class="music-toggle">
+        <h2 id="webMusic">Website Music: </h2>
+        <span>By: MelaMelon</span> &copy;<br>
+        <span id="musicStatus">Status: Stopped</span> <br>
+        <span id="time-left">Time Left: 0:00</span> <br>
+        <div class="progress-bar">
+          <div class="progress"></div>
+          <span id="progress-percent">0%</span> 
+        </div>
+        <input type="checkbox" id="toggle-switch">
+        <label for="toggle-switch"></label>
+      </div>
+      
+      <audio id="background-music" loop>
+        <source src="websiteMusic.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+      </audio>
+      
+      <h1 id="theme-title">Theme Selector</h1>
+      <div>
+        <label for="theme-select">Select Theme:</label>
+        <select id="theme-select" onchange="changeTheme()">
+          <option value="dark">Dark Theme (Default)</option>
+          <option value="light">Light Theme</option>
+          <option value="black">Blackout Theme</option>
+          <option value="black and purple">Black And Purple Theme</option>
+          <option value="black and gold">Black And Gold Theme</option>
+          <option value="sky">Sky Theme</option>
+          <option value="season-theme">Season Theme</option>
+        </select>
+      </div>
+      
+      <label for="font-size">Text Size:</label>
+      <input type="range" id="font-size" min="12" max="24" value="16" step="1">
+      <p>Font Size: <span id="font-size-text"></span></p>
+      
+      <hr>
+      
+      <h2 id="settings-hr">Accessibility</h2>
+      <p>Soon...</p>
+      
+      <hr>
+      
+      <h1>Bugs</h1>
+      <h5>If Some Sections Is Not Show Off Or Something Is Not Good/Working/etc..</h5>
+      <button class="btn" onclick="refresh()">Reload Everythings</button>
+      <p>Or you can inform technical support about the problem by opening the menu button in
+      Navbar</p>
+      <script src="language.js"></script>
+    </div>
+  <script src="settings.js"></script>
+  <script src="script.js"></script>
+  <script src="level.js"></script>
+</body>
+</html>

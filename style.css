@@ -1,0 +1,719 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html{
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  
+  /* background-image: url('../bg.jpeg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: inherit; */
+  /* user-select: none; */
+  overflow-x: hidden;
+  
+}
+
+body{
+  font-size: 16px;
+  color: #fff;
+  background: #212226;
+  transition: background 1.5s, background-color 3s, color 1.5s;
+}
+
+[data-theme="dark"] {
+  background: #212226;
+  color: #fff;
+}
+
+[data-theme="light"] {
+  background: #cccccc;
+  color: #000;
+}
+
+[data-theme="black"] {
+  background: #000;
+  color: #fff;
+}
+
+[data-theme="black and purple"] {
+  background: linear-gradient(to bottom, black, purple);
+  color: #fff;
+}
+
+[data-theme="black and gold"] {
+  background: linear-gradient(to bottom , black, gold);
+  color: #fff;
+}
+
+[data-theme="sky"] {
+  background: linear-gradient(to bottom, #2c3e50, #3498db);
+}
+
+[data-theme="season-theme"] {
+  background: linear-gradient(to bottom, #5e0000, #000);
+}
+
+/* Style the navigation */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #212226;
+  font-family: Sans-Serif, sans-serif;
+  padding: 10px;
+  z-index: 9997;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  background-color: #4b4b4b;
+}
+
+img{
+  width: 75%;
+  height: auto;
+  position: relative ;
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+}
+
+h1{
+    font-size: 2rem;
+    margin: 1.7rem 0;
+}
+
+h3{
+    font-size: 1.5rem;
+    margin-bottom: 1.7rem;
+}
+
+h4{
+    font-size: 1.25rem;
+    letter-spacing: 0.12rem;
+}
+
+h5{
+    font-size: 1.37rem;
+    margin-bottom: 1.5rem;
+}
+
+span {
+  font-size: 1.5rem;
+}
+
+hr{
+  border: 10px solid #363940;
+  border-radius: 5px;
+  width: 95%;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button{
+  display: block;
+  padding: 5px;
+  background-color: #212226;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+input{
+  border-radius: 10px;
+}
+
+i {
+  display: block;
+}
+
+select{
+  margin: 20px 0 10px 20px;
+}
+
+.title {
+  text-align: center;
+  font-weight: 800;
+}
+.btn {
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: #363940;
+  border: 2px solid #fff ;
+  color: #fff;
+  margin-top: 8px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s;
+  transition: opacity 0.75s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #212226;
+}
+
+.padding{
+  padding-top: 32px;
+  margin-top: 32px;
+  color: #212226;
+}
+
+.home{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 30px;
+
+    background-image: url('season-banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.content{
+  display: flex;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  align-content: center;
+}
+
+.container-texts{
+  opacity: 1;
+  margin-left: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#cursor {
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    background-color: #fff;
+    animation: cursor-blink 0.8s infinite;
+}
+
+@keyframes cursor-blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+#season-theme {
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  right: 5px;
+}
+
+@keyframes float{
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(50px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+
+.news{
+  /*background-color: #000;*/
+  width: 100%;
+  overflow-y: scroll;
+  border-radius: 5px;
+  padding: 8%;
+}
+
+.news h2{
+  margin-bottom: 16px;
+}
+
+.countdown {
+  margin-top: 40px;
+  background: linear-gradient(to top left, #363940, #212226);
+  border: 2px solid #fff;
+  box-shadow: 0px 10px 20px #fff;
+  padding: 20px;
+  margin: 0 auto; /* Center the card on the page */
+  max-width: 300px; /* Set the maximum width of the card */
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  .countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Media query for computers */
+@media (min-width: 768px) {
+  .countdown {
+    display: block;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 600px;
+  }
+}
+
+#countDown h1{
+  text-align: center;
+  justify-content: center;
+}
+
+.countdown img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border: 1px solid #fff;
+}
+
+.countdown-time {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.countdown-time span {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.countdown-time span:last-child {
+  margin-right: 0;
+}
+
+.count-content button{
+  background-color: #363940;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+#new-mark {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin-right: 4px;
+}
+
+#delete-mark {
+  display: inline-block;
+  background-color: #ff0000;
+  color: #fff;
+  font-weight: bold;
+  padding: 2px 4px;
+  border-radius: 4px;
+  margin-right: 4px;
+}
+
+#loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: #000;
+        z-index: 9999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        transition: opacity 0.5s ease-in-out, background 1s ease-in-out;
+      }
+      #loading-bar {
+        width: 80%;
+        max-width: 600px;
+        height: 20px;
+        border-radius: 10px;
+        background: #ddd;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+      #loading-progress {
+        width: 0%;
+        height: 100%;
+        background-color: #0046f1;
+        transition: width 0.5s ease-in-out;
+      }
+      #load-info {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        background: rgba(0,0,0,0.6);
+        padding: 10px 20px 10px 10px;
+        border-radius: 5px;
+        border: 1px solid #999;
+        box-shadow: 0px 10px 20px #fff;
+        bottom: 10px;
+        left: 10px;
+        transition: all 2s;
+      }
+      #loading-percent {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      #fact-container {
+        width: 80%;
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+      }
+      
+      .news-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+      .news-card {
+        width: 300px;
+        padding: 10px;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        box-shadow: 0px 10px 20px #fff;
+      }
+      .news-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .news-content {
+        font-size: 14px;
+      }
+      .news-image {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        border: 1px solid #fff;
+      }
+      .news-button {
+        display: inline-block;
+        padding: 5px 10px;
+        margin-top: 10px;
+        background-color: #f2f2f2;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        text-decoration: none;
+        color: #333;
+        font-size: 14px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+      .news-button:hover {
+        background-color: #ddd;
+      }
+
+.qaa{
+  display: block;
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-question {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  
+  transition: opacity 0.5s ease-in-out;
+}
+.dropdown-button {
+  background-color: #f3f3f3;
+  color: #333;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+.dropbtn {
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  top: 40px;
+  left: 0;
+  display: none;
+  position: fixed;
+  background-color: #363940;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  border: 1px solid #fff;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content button {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.footer {
+  background-color: #363940;
+  padding: 20px;
+  --text-align: center;
+}
+
+.footer-content {
+  display: inline-block;
+}
+
+#options-container {
+  text-align: center;
+  margin-top: 100px;
+}
+
+#selected-option {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.hud-btn {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+  bottom: 25px;
+  right: 15px;
+  background: #212226;
+  border: 2px solid #fff;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  z-index: 9998;
+  
+  transition: opacity 0.5s ease-in-out;;
+}
+
+#levelDisplay{
+    position: fixed;
+    bottom: 20px;
+    left: 0px;
+    width: 45%;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 9998;
+    font-size: 16px;
+    
+    transition: all 0.5s ease-out;
+}
+
+.level{
+    font-size: 20px;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+#level{
+    color: #fff;
+}
+.xp{
+    color: #fff;
+    margin-top: 5px;
+}
+#xp{
+    color: #fff;
+}
+#xpReq{
+    color: chartreuse;
+}
+
+main {
+  padding: 20px;
+}
+
+#settings-hr {
+  color: #ccc;
+  border-bottom: 1px solid #ccc;
+  width: 80%;
+}
+
+#challenges-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.challenge {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #08306D;
+    border-radius: 10px;
+    border: 1px solid #fff;
+}
+
+.challenge-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.challenge-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.challenge-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.challenge-description {
+    text-align: center;
+}
+
+#leaks-container {
+    margin-top: 20px;
+}
+
+.leak img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #fff;
+}
+
+.leak {
+    background-color: #363940;
+    box-shadow: 0px 5px 10px #fff;
+    border-radius: 5px;
+    width: 80%;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.leak h2 {
+    color: #ff6600;
+    margin-bottom: 5px;
+}
+
+.leak p {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.leak .date {
+    color: #999;
+    font-size: 12px;
+}
+
+#sub-counter {
+  border-radius: 10px;
+  border: 1px solid #fff;
+}
+
+#battle-pass {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.character {
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.character img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.character h3 {
+  margin-bottom: 5px;
+}
+
+.character p {
+  font-size: 14px;
+}

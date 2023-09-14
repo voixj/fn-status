@@ -11,8 +11,8 @@ const countdownData = [
   },
   {
     title: "Next Update",
-    description: "Next Update Is v26.10 Release",
-    endTime: "2023-09-13 10:00:00",
+    description: "Next Update Is v26.20 Release",
+    endTime: "2023-09-26 10:00:00",
     image: "season-banner.png"
   },
   {
@@ -20,6 +20,12 @@ const countdownData = [
     description: "Release Next Crew Pack",
     endTime: "2023-10-01 03:00:00",
     image: "crew_pack.jpeg"
+  },
+  {
+    title: "Fortnite Birthday",
+    description: "Fortnite Birthday Coming",
+    endTime: "2023-09-23",
+    image: "birthday.webp"
   },
   {
     title: "Fortnitemares",

@@ -106,3 +106,24 @@ function changeTheme() {
   // Apply the selected theme
   body.setAttribute("data-theme", theme);
 }
+
+// Push Notifications
+const notifiBtn = document.getElementById('push-notifications');
+
+notifiBtn.addEventListener('click', () => {
+  Notification.requestPermission().then(perm => {
+    if (perm === "granted") {
+      notifiBtn.style.display = "none";
+      const Notification = new Notification("Test Notification", {
+        body: Math.random(),
+        data: { hello: "world" },
+        icon: "icon_levelup.png",
+        // tag: "Welcome Message"
+      })
+      
+      notification.addEventListener("error", e => {
+        alert("Error")
+      })
+    }
+  })
+})

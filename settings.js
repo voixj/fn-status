@@ -108,22 +108,66 @@ function changeTheme() {
 }
 
 // Push Notifications
-const notifiBtn = document.getElementById('push-notifications');
+// Check if the browser supports service workers
+if ('serviceWorker' in navigator) {
+  // Register the service worker
+  navigator.serviceWorker.register('service-worker.js')
+    .then(registration => {
+      console.log('Service Worker registered:', registration);
+    })
+    .catch(error => {
+      console.log('Service Worker registration failed:', error);
+    });
+}
 
-notifiBtn.addEventListener('click', () => {
-  Notification.requestPermission().then(perm => {
-    if (perm === "granted") {
-      notifiBtn.style.display = "none";
-      const Notification = new Notification("Test Notification", {
-        body: Math.random(),
-        data: { hello: "world" },
-        icon: "icon_levelup.png",
-        // tag: "Welcome Message"
+// Request permission for notifications
+function requestNotificationPermission() {
+  Notification.requestPermission()
+    .then(permission => {
+      if (permission === 'granted') {
+        console.log('Notification permission granted.');
+        subscribeToPushNotifications();
+      } else {
+        console.log('Notification permission denied.');
+      }
+    })
+    .catch(error => {
+      console.log('Error requesting permission:', error);
+    });
+}
+
+// Subscribe to push notifications
+function subscribeToPushNotifications() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.ready
+      .then(registration => {
+        return registration.pushManager.subscribe({
+          userVisibleOnly: true
+        });
       })
-      
-      notification.addEventListener("error", e => {
-        alert("Error")
+      .then(subscription => {
+        console.log('Push subscription:', subscription);
       })
-    }
-  })
-})
+      .catch(error => {
+        console.log('Error subscribing to push notifications:', error);
+      });
+  }
+}
+
+// Event listener for the subscribe button
+document.getElementById('subscribe-button').addEventListener('click', () => {
+  requestNotificationPermission();
+});
+
+self.addEventListener('push', event => {
+  const title = 'Push Notification';
+  const options = {
+    body: 'This is a push notification.',
+    icon: 'icon_levelup.png',
+    // badge: 'path/to/notification-badge.png'
+  };
+
+  event.waitUntil(
+    self.registration.showNotification(title, options)
+  );
+});

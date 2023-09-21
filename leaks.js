@@ -3,9 +3,34 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     const leaks = [
       {
-        title: "No Leaks",
+        title: "New Design",
+        content: "New Design For Interface!",
+        image: "leak1.jpeg",
+        date: "2023-09-21",
+      },
+      {
+        title: "New Design",
+        content: "New Design For Item Shop",
+        image: "leak3.jpeg",
+        date: "2023-09-21"
+      },
+      {
+        title: "",
         content: "",
-        date: "2023-09-11",
+        image: "leak4.jpeg",
+        date: "2023-09-21"
+      },
+      {
+        title: "Photo Taking",
+        content: "Interface of the new Photo Taking feature!",
+        image: "leak5.jpeg",
+        date: "2023-09-21"
+      },
+      {
+        title: "LEGO COOPERATION",
+        content: "You’ll be able to log into Epic Games with your LEGO account soon!",
+        image: "leak2.jpeg",
+        date: "2023-09-21"
       },
     ];
 

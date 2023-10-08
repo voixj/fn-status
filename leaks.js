@@ -3,34 +3,34 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     const leaks = [
       {
-        title: "New Design",
-        content: "New Design For Interface!",
-        image: "leak1.jpeg",
-        date: "2023-09-21",
+        title: "Halloween Event",
+        content: "Halloween Event Coming In 10 October!",
+        image: "leak1.jpg",
+        date: "2023-10-08",
       },
       {
-        title: "New Design",
-        content: "New Design For Item Shop",
-        image: "leak3.jpeg",
-        date: "2023-09-21"
-      },
-      {
-        title: "",
-        content: "",
-        image: "leak4.jpeg",
-        date: "2023-09-21"
-      },
-      {
-        title: "Photo Taking",
-        content: "Interface of the new Photo Taking feature!",
-        image: "leak5.jpeg",
-        date: "2023-09-21"
-      },
-      {
-        title: "LEGO COOPERATION",
-        content: "You’ll be able to log into Epic Games with your LEGO account soon!",
+        title: "Halloween Event",
+        content: "Halloween Lobby Background",
         image: "leak2.jpeg",
-        date: "2023-09-21"
+        date: "2023-10-08"
+      },
+      {
+        title: "Rank Rewards",
+        content: "New Rank Rewards",
+        image: "leak3.jpeg",
+        date: "2023-10-08"
+      },
+      {
+        title: "New weapon",
+        content: "Its Availabled!",
+        image: "leak4.jpeg",
+        date: "2023-10-08"
+      },
+      {
+        title: "New FNCS Skins",
+        content: "New FNCS Skins, Its Coming Soon To Item Shop!",
+        image: "leak5.jpeg",
+        date: "2023-10-08"
       },
     ];
 
